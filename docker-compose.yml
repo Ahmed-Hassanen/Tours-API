@@ -17,16 +17,16 @@ services:
     volumes:
       - ./app/src:/app/src
     environment:
-      NODE_ENV: development
-      PORT: 3000
-      DATABASE: mongodb://natours_db:27017/natours
-      DATABASE_PASSWORD: 3032000
-      EXPIRES_IN: 90d
-      JWT_COOKIE_EXPIRES_IN: 90
-      JWT_SECRET: MY-JWT_SECRET-for-nodejs-and-express-and-mongodb
-      EMAIL_USERNAME: 7a1c4978319beb
-      EMAIL_PASSWORD: 840db2be3280c1
-      EMAIL_HOST: smtp.mailtrap.io
-      EMAIL_PORT: 2525
+      - NODE_ENV: development
+      - PORT: 3000
+      - DATABASE: mongodb://natours_db:27017/natours
+      - DATABASE_PASSWORD: 3032000
+      - EXPIRES_IN: 90d
+      - JWT_COOKIE_EXPIRES_IN: 90
+      - JWT_SECRET: MY-JWT_SECRET-for-nodejs-and-express-and-mongodb
+      - EMAIL_USERNAME: 7a1c4978319beb
+      - EMAIL_PASSWORD: 840db2be3280c1
+      - EMAIL_HOST: smtp.mailtrap.io
+      - EMAIL_PORT: 2525
     depends_on:
       - natours_db
